@@ -8,7 +8,7 @@ Admin_Password="smartypants"
 
 '''Code to create empty tables.'''
 def create_empty_tables():
-    db=MySQLdb.connect(host="localhost",port=3306,user="root",passwd="adityaan",database="Bus_Ticket_Booking_Data")
+    db=MySQLdb.connect(host="localhost",port=3306,user="root",passwd="####",database="Bus_Ticket_Booking_Data")
     cur=db.cursor()
     cur.execute("create table Bus_List (Bus_ID int(6) primary key, Point_Of_Departure char(20), Destination char(20), Date_Of_Departure date, Time_Of_Departure varchar(10), Seats_Available int(2), Fare_In_Rs int(4))")
     cur.execute("create table Passenger_Info (Name char(25), Username char(15) primary key, Password char(15), Boarded_Bus_ID int(6) references Bus_List (Bus_ID), Number_Of_Seats_Reserved int(3),  Total_Cost_In_Rs int(6))")
@@ -17,7 +17,7 @@ def create_empty_tables():
 
 '''Code to create filled tables.'''
 def create_filled_tables():
-    db=MySQLdb.connect(host="localhost",port=3306,user="root",passwd="adityaan",database="Bus_Ticket_Booking_Data")
+    db=MySQLdb.connect(host="localhost",port=3306,user="root",passwd="####",database="Bus_Ticket_Booking_Data")
     cur=db.cursor()
 
 
@@ -43,7 +43,7 @@ def create_filled_tables():
 
 '''Code to create the database "Bus_Ticket_Booking_Data" in the user's MySQL server.'''
 def create_database():
-    db=MySQLdb.connect(host="localhost",port=3306,user="root",passwd="adityaan")
+    db=MySQLdb.connect(host="localhost",port=3306,user="root",passwd="####")
     cur=db.cursor()
     cur.execute("select schema_name from information_schema.schemata where schema_name='Bus_Ticket_Booking_Data'")
     existing_db=cur.fetchall()
@@ -85,7 +85,7 @@ def create_database():
 
 '''Code to book tickets.'''
 def book():
-    db=MySQLdb.connect(host="localhost",port=3306,user="root",passwd="adityaan",database="Bus_Ticket_Booking_Data")
+    db=MySQLdb.connect(host="localhost",port=3306,user="root",passwd="####",database="Bus_Ticket_Booking_Data")
     cur=db.cursor()                                               
     start=input("Enter the name of your state-")                 
     dest=input("Enter your destination-")                         
@@ -157,7 +157,7 @@ def book():
 
 '''Code to cancel booking.'''
 def cancel():
-    db=MySQLdb.connect(host="localhost",port=3306,user="root",passwd="adityaan",database="Bus_Ticket_Booking_Data")
+    db=MySQLdb.connect(host="localhost",port=3306,user="root",passwd="####",database="Bus_Ticket_Booking_Data")
     cur=db.cursor()
     username=input("Enter your username-")
     pwd=input("Enter your password-")
@@ -186,7 +186,7 @@ def cancel():
 
 '''Code to modify bus_list table'''
 def modify():
-    db=MySQLdb.connect(host="localhost",port=3306,user="root",passwd="adityaan",database="Bus_Ticket_Booking_Data")
+    db=MySQLdb.connect(host="localhost",port=3306,user="root",passwd="####",database="Bus_Ticket_Booking_Data")
     cur=db.cursor()
     while True:
         print('''        1.Add a bus.
