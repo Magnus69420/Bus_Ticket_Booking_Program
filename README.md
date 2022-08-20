@@ -1,5 +1,5 @@
 # Bus_Ticket_Booking_Program
-A minimalistic project to book Bus Tickets using Python as Front-End and the Back-end, using MySQL as the DBMS.
+A minimalistic project to book Bus Tickets with a CLI Front-End and Python Back-end, using MySQL as the DBMS.
 
 This is a simple program, which may be used for high school projects.
 The program connects to your MySQL DBMS, and performs operations on it.
